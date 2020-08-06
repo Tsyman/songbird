@@ -1,0 +1,12 @@
+.movie-description__inner {
+  display: flex;
+}
+
+.movie-description-image {
+  background-image: url('https://raw.githubusercontent.com/Tsyman/songbird-data/master/ru/Brat%202/Brat%202.jpg');
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

@@ -9,12 +9,12 @@ const AppHeader = () => (
           <p>Score: 11</p>
         </div>
         <ul className="header-bottom">
-          <li>70-80</li>
-          <li>80-90</li>
-          <li>90-00</li>
-          <li>00-10</li>
-          <li>10-20</li>
-          <li>рус</li>
+          <li>Ру(1960-2000)</li>
+          <li>1950-1980</li>
+          <li>1980-1990</li>
+          <li>1990-2000</li>
+          <li>2000-2010</li>
+          <li>2010-2020</li>
         </ul>
       </header>
 

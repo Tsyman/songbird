@@ -1,7 +1,7 @@
 import React from 'react';
 import AppHeader from '../../Components/Header/Header';
 import './App.css';
-import MainContent from '../MainContent/Main';
+import MainContent from '../Main/Main';
 
 const App = () => (
     <React.Fragment>

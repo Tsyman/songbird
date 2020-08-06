@@ -12,3 +12,7 @@
   background-size: cover;
   background-position: center;
 }
+
+.width {
+  width: 500px;
+}
