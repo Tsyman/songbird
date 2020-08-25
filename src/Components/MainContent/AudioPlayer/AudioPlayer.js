@@ -4,6 +4,7 @@ import 'react-h5-audio-player/lib/styles.css';
 
 const Player = (props) => (
   <AudioPlayer
+    autoPlayAfterSrcChange={false}
     src={props.audio}
     volume={0.5}
     showJumpControls={false}

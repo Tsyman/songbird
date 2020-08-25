@@ -98,8 +98,8 @@ const moviesData = [
       rating: 'КиноПоиск: 8.5, IMDb: 8.8',
       year: '1966',
       description: 'В разгар гражданской войны таинственный стрелок скитается по просторам Дикого Запада. У него нет ни дома, ни друзей, ни компаньонов, пока он не встречает двоих незнакомцев, таких же безжалостных и циничных. По воле судьбы трое мужчин вынуждены объединить свои усилия в поисках украденного золота. Но совместная работа - не самое подходящее занятие для таких отъявленных бандитов, как они. Компаньоны вскоре понимают, что в их дерзком и опасном путешествии по разоренной войной стране самое важное - никому не доверять и держать пистолет наготове, если хочешь остаться в живых.',
-      image: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/50-80/Il%20buono%2C%20il%20brutto%2C%20il%20cattivo/Il%20buono%2C%20il%20brutto%2C%20il%20cattivo.jpg',
-      audio: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/50-80/Il%20buono%2C%20il%20brutto%2C%20il%20cattivo/Il%20buono%2C%20il%20brutto%2C%20il%20cattivo.mp3',
+      image: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/50-80/The%20Good%2C%20the%20Bad%20and%20the%20Ugly/The%20Good%2C%20the%20Bad%20and%20the%20Ugly.jpg',
+      audio: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/50-80/The%20Good%2C%20the%20Bad%20and%20the%20Ugly/The%20Good%2C%20the%20Bad%20and%20the%20Ugly.mp3',
     },
     {
       id: 6,
@@ -192,8 +192,8 @@ const moviesData = [
       rating: 'КиноПоиск: 8.7, IMDb: 8.5',
       year: '1994',
       description: 'Профессиональный убийца Леон неожиданно для себя самого решает помочь 11-летней соседке Матильде, семью которой убили коррумпированные полицейские.',
-      image: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/90-00/Léon/Léon.jpg',
-      audio: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/90-00/Léon/Léon.mp3',
+      image: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/90-00/Leon/Leon.jpg',
+      audio: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/90-00/Leon/Leon.mp3',
     },
     {
       id: 4,
@@ -248,8 +248,8 @@ const moviesData = [
       rating: 'КиноПоиск: 8.5, IMDb: 9.0',
       year: '2008',
       description: 'Бэтмен поднимает ставки в войне с криминалом. С помощью лейтенанта Джима Гордона и прокурора Харви Дента он намерен очистить улицы Готэма от преступности. Сотрудничество оказывается эффективным, но скоро они обнаружат себя посреди хаоса, развязанного восходящим криминальным гением, известным напуганным горожанам под именем Джокер.',
-      image: 'https://live.staticflickr.com/65535/49322743903_32f3922d9e.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/BLMSIUFTFU/XC513498-190709_1175_Cir.cyan-f.mp3',
+      image: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/00-10/The%20Dark%20Knight/The%20Dark%20Knight.jpg',
+      audio: 'https://raw.githubusercontent.com/Tsyman/songbird-data/master/00-10/The%20Dark%20Knight/The%20Dark%20Knight.mp3',
     },
     {
       id: 4,
