@@ -7,38 +7,53 @@ import NextCategoryBtn from '../../Components/MainContent/NextCategoryBtn/NextCa
 import moviesData from '../../services/moviesData';
 import getRandomInt from '../../services/GetRandomInt';
 
-const MainContent = () => {
-  const [currentLevel, setLevel] = useState(0);
-  const randomMovie = () => moviesData[currentLevel][getRandomInt(0, moviesData.length - 1)];
-  const [movie, setMovie] = useState(randomMovie());
-  const [clickedMovie, setClickedMovie] = useState({});
+const MainContent = (props) => {
+  const [currentLevel, setCurrentLevel] = useState(0);
+  const [guessMovie, setMovie] = useState({});
+  const [selectedMovie, setClickedMovie] = useState({});
+  const [checkGuessMovie, setCheckGuessMovie] = useState(false);
 
   useEffect(() => {
+    const randomMovie = () => moviesData[currentLevel][getRandomInt(0, moviesData.length - 1)];
     setMovie(randomMovie());
   }, [currentLevel]);
 
   return (
       <main className='main-content'>
         <CurrentMovie
-          level={currentLevel}
-          movie={movie.movie}
-          audio={movie.audio}
-          image={movie.image}
+          guessMovie={guessMovie.movie}
+          guessMovieAudio={guessMovie.audio}
+          guessMovieImage={guessMovie.image}
+          checkGuessMovie={checkGuessMovie}
         />
         <div className="container">
-          <MoviesList level={currentLevel} setClickedMovie={setClickedMovie}/>
+          <MoviesList
+            currentLevel={currentLevel}
+            setClickedMovie={setClickedMovie}
+            guessMovieId={guessMovie.id}
+            checkGuessMovie={checkGuessMovie}
+            setCheckGuessMovie={setCheckGuessMovie}
+            setAttempts={props.setAttempts}
+            attempts={props.attempts}
+          />
           <MovieDescription
-            movie={clickedMovie.movie}
-            audio={clickedMovie.audio}
-            image={clickedMovie.image}
-            year={clickedMovie.year}
-            rating={clickedMovie.rating}
-            description={clickedMovie.description}
+            selectedMovie={selectedMovie.movie}
+            selectedMovieAudio={selectedMovie.audio}
+            selectedMovieImage={selectedMovie.image}
+            selectedMovieYear={selectedMovie.year}
+            selectedMovieRating={selectedMovie.rating}
+            selectedMovieDescription={selectedMovie.description}
           />
         </div>
         <NextCategoryBtn
-          setLevel={setLevel}
+          setCurrentLevel={setCurrentLevel}
           currentLevel={currentLevel}
+          checkGuessMovie={checkGuessMovie}
+          setCheckGuessMovie={setCheckGuessMovie}
+          setScore={props.setScore}
+          setAttempts={props.setAttempts}
+          score={props.score}
+          attempts={props.attempts}
         />
       </main>
   );

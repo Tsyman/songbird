@@ -1,12 +1,12 @@
 import React from 'react';
 import './Header.css';
 
-const AppHeader = () => (
+const AppHeader = (props) => (
 
       <header>
         <div className="header-top">
           <h1>Guess The Movie!</h1>
-          <p>Score: 11</p>
+          <p>Score: {props.score}</p>
         </div>
         <ul className="header-bottom">
           <li>Ру(1960-2000)</li>

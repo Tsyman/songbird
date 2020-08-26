@@ -5,7 +5,12 @@ const NextCategoryBtn = (props) => (
   <button
     className="next-button"
     onClick={() => {
-      props.setLevel(props.currentLevel + 1);
+      if (props.checkGuessMovie) {
+        props.setCurrentLevel(props.currentLevel + 1);
+        props.setCheckGuessMovie(!props.checkGuessMovie);
+        props.setScore(props.score + props.attempts);
+        props.setAttempts(5);
+      }
     }}
     >Next
   </button>
