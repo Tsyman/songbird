@@ -19,7 +19,7 @@ const MoviesList = (props) => {
               currentLevel={props.currentLevel} movie={props.setClickedMovie}
               movieId={props.guessMovieId} setCheckGuessMovie={props.setCheckGuessMovie}
               checkGuessMovie={props.checkGuessMovie} setAttempts={props.setAttempts}
-              attempts={props.attempts}>
+              attempts={props.attempts} setShowMovieInfo={props.setShowMovieInfo}>
             </Movie>
           ))
           }

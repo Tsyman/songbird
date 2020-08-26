@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css';
+import moviesCategories from '../../services/movieCategories';
+import NavigationItem from './NavigationItem/NavigationItem';
 
 const AppHeader = (props) => (
 
@@ -9,12 +11,14 @@ const AppHeader = (props) => (
           <p>Score: {props.score}</p>
         </div>
         <ul className="header-bottom">
-          <li>Ру(1960-2000)</li>
-          <li>1950-1980</li>
-          <li>1980-1990</li>
-          <li>1990-2000</li>
-          <li>2000-2010</li>
-          <li>2010-2020</li>
+          {
+            moviesCategories.map((elem) => {
+              if (elem === moviesCategories[props.currentLevel]) {
+                return <NavigationItem categoryName={elem} key={elem} className={'nav-item active'}/>;
+              }
+              return <NavigationItem categoryName={elem} key={elem} className={'nav-item'}/>;
+            })
+          }
         </ul>
       </header>
 

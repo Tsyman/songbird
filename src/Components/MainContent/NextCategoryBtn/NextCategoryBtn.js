@@ -10,6 +10,7 @@ const NextCategoryBtn = (props) => (
         props.setCheckGuessMovie(!props.checkGuessMovie);
         props.setScore(props.score + props.attempts);
         props.setAttempts(5);
+        props.setShowMovieInfo(false);
       }
     }}
     >Next

@@ -7,6 +7,7 @@ const Movie = (props) => (
 <li className="movie"
 onClick={(event) => {
   props.movie(moviesData[props.currentLevel].find((elem) => elem.id === props.guessMovieId));
+  props.setShowMovieInfo(true);
   if (props.movieId === props.guessMovieId) {
     props.setCheckGuessMovie(!props.checkGuessMovie);
     return;
