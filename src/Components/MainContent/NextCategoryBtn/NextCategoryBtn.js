@@ -17,7 +17,6 @@ const NextCategoryBtn = (props) => {
           props.setAttempts(5);
           props.setShowMovieInfo(false);
           props.setGameEnd(!props.gameEnd);
-          console.log('reset');
         }
         if (props.currentLevel === 5) {
           props.setScore(props.score + props.attempts);
@@ -31,8 +30,8 @@ const NextCategoryBtn = (props) => {
           props.setAttempts(5);
           props.setShowMovieInfo(false);
         }
-        document.querySelectorAll('.clicked').forEach((elem) => {
-          elem.classList.remove('clicked');
+        document.querySelectorAll('.movie').forEach((elem) => {
+          elem.classList.remove('clicked', 'success', 'error');
         });
       }}
       >{buttonName}

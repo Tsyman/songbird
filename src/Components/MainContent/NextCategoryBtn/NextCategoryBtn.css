@@ -6,6 +6,8 @@
   outline: none;
   border: none;
   color: #fff;
+  font-family: 'Font';
+  font-size: 16px;
 }
 
 .next-button_active {
@@ -17,6 +19,8 @@
   border: none;
   color: #fff;
   cursor: pointer;
+  font-family: 'Font';
+  font-size: 16px;
 }
 
 .next-button_active:hover {

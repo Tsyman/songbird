@@ -6,6 +6,21 @@ import './Main.css';
 import NextCategoryBtn from '../../Components/MainContent/NextCategoryBtn/NextCategoryBtn';
 import moviesData from '../../services/moviesData';
 import getRandomInt from '../../services/GetRandomInt';
+import perfectly from '../../assets/images/perfectly.gif';
+import notBad from '../../assets/images/not_bad.gif';
+import good from '../../assets/images/good.gif';
+import tryAgain from '../../assets/images/try_again.gif';
+
+const endGameGif = (score) => {
+  if (score === 30) {
+    return perfectly;
+  } if (score > 20 && score < 30) {
+    return notBad;
+  } if (score > 10 && score < 20) {
+    return good;
+  }
+  return tryAgain;
+};
 
 const MainContent = (props) => {
   const [guessMovie, setMovie] = useState({});
@@ -74,19 +89,20 @@ const MainContent = (props) => {
         />
       </main>
       : <main className='main-content'>
-        <p className='game-end'>Игра закончена. Вы набрали {props.score} баллов из 30 возможных</p>
-        <NextCategoryBtn
-          setCurrentLevel={props.setCurrentLevel}
-          currentLevel={props.currentLevel}
-          checkGuessMovie={checkGuessMovie}
-          setCheckGuessMovie={setCheckGuessMovie}
-          setScore={props.setScore}
-          setAttempts={props.setAttempts}
-          setShowMovieInfo={setShowMovieInfo}
-          setGameEnd={setGameEnd}
-          gameEnd={gameEnd}
-        />
-      </main>
+          <img className='congratulation' src={endGameGif(props.score)} alt='End game gif'></img>
+          <p className='game-end'>Игра закончена. Вы набрали {props.score} баллов из 30 возможных</p>
+          <NextCategoryBtn
+            setCurrentLevel={props.setCurrentLevel}
+            currentLevel={props.currentLevel}
+            checkGuessMovie={checkGuessMovie}
+            setCheckGuessMovie={setCheckGuessMovie}
+            setScore={props.setScore}
+            setAttempts={props.setAttempts}
+            setShowMovieInfo={setShowMovieInfo}
+            setGameEnd={setGameEnd}
+            gameEnd={gameEnd}
+          />
+        </main>
   );
 };
 

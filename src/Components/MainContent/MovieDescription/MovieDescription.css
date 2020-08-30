@@ -44,7 +44,7 @@
 }
 
 .focus {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .hidden {
@@ -54,13 +54,14 @@
   left: 0px;
   background-color: #5a0000;
   color: #fff;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
   -moz-box-shadow: 0 1px 1px rgba(0,0,0,.16);
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.16);
   box-shadow: 0 1px 1px rgba(0,0,0,.16);
-  font-size: 16px;
+  font-size: 14px;
   text-align: justify;
+  line-height: 18px;
 }
 
 .focus + .hidden:before {
