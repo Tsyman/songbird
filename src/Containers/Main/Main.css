@@ -20,7 +20,7 @@
 
 .congratulation {
   margin: 30px 0;
-  width: 75%;
+  width: 60%;
 }
 
 .game-end {
@@ -45,6 +45,7 @@
   }
   .hint {
     font-size: 16px;
+    padding-top: 20px;
   }
   .game-end {
     font-size: 20px;

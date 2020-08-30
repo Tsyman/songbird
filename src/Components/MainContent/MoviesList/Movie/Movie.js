@@ -20,15 +20,12 @@ const Movie = (props) => (
       return;
     }
 
-    if (!target.classList.contains('clicked') && !props.checkGuessMovie) {
+    if (!props.checkGuessMovie) {
       props.setAttempts(props.attempts - 1);
       const sound = new Audio(errorSound);
       sound.play();
       target.classList.add('error');
-    } else {
-      return;
     }
-    target.classList.add('clicked');
   }}>
     <span className='indicator'></span>
     {props.name}
