@@ -1,13 +1,37 @@
-.header-top {
+.header__inner {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding: 10px 0 20px;
 }
 
-.header-bottom {
+.header__inner .title {
+  font-size: 35px;
+}
+
+.header__inner .score {
+  font-size: 20px;
+}
+
+.navigation {
   display: flex;
   justify-content: space-evenly;
+  border-radius: 5px;
+  background-color: #5a0000;
+  overflow: hidden;
+}
+
+.nav-item {
+  flex: auto;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.nav-item:last-child {
+  border-right: none;
 }
 
 .active {
-  background-color: green;
+  background-color: #970333;
 }

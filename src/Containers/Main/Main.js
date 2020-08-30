@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CurrentMovie from '../../Components/MainContent/CurrentMovie/CurrentMovie';
+import GuessMovie from '../../Components/MainContent/GuessMovie/GuessMovie';
 import MoviesList from '../../Components/MainContent/MoviesList/MoviesList';
 import MovieDescription from '../../Components/MainContent/MovieDescription/MovieDescription';
 import './Main.css';
@@ -12,6 +12,7 @@ const MainContent = (props) => {
   const [selectedMovie, setClickedMovie] = useState({});
   const [checkGuessMovie, setCheckGuessMovie] = useState(false);
   const [showMovieInfo, setShowMovieInfo] = useState(false);
+  const [gameEnd, setGameEnd] = useState(false);
 
   useEffect(() => {
     const randomMovie = () => (
@@ -21,14 +22,15 @@ const MainContent = (props) => {
   }, [props.currentLevel]);
 
   return (
-      <main className='main-content'>
-        <CurrentMovie
+    !gameEnd
+      ? <main className='main-content'>
+        <GuessMovie
           guessMovie={guessMovie.movie}
           guessMovieAudio={guessMovie.audio}
           guessMovieImage={guessMovie.image}
           checkGuessMovie={checkGuessMovie}
         />
-        <div className="container">
+        <div className="main-content__inner">
           <MoviesList
             currentLevel={props.currentLevel}
             setClickedMovie={setClickedMovie}
@@ -39,22 +41,23 @@ const MainContent = (props) => {
             attempts={props.attempts}
             setShowMovieInfo={setShowMovieInfo}
           />
-          {
-            showMovieInfo
-              ? <MovieDescription
-                  selectedMovie={selectedMovie.movie}
-                  selectedMovieAudio={selectedMovie.audio}
-                  selectedMovieImage={selectedMovie.image}
-                  selectedMovieYear={selectedMovie.year}
-                  selectedMovieRating={selectedMovie.rating}
-                  selectedMovieDescription={selectedMovie.description}
-                />
-              : <div>
-                  <p>Послушайте плеер.</p>
-                  <p>Выберите фильм из списка</p>
-                </div>
-          }
-
+          <div className='movie-description'>
+            {
+              showMovieInfo
+                ? <MovieDescription
+                    selectedMovie={selectedMovie.movie}
+                    selectedMovieAudio={selectedMovie.audio}
+                    selectedMovieImage={selectedMovie.image}
+                    selectedMovieYear={selectedMovie.year}
+                    selectedMovieRating={selectedMovie.rating}
+                    selectedMovieDescription={selectedMovie.description}
+                  />
+                : <div className='hint'>
+                    <p>Послушайте плеер.</p>
+                    <p>Выберите фильм из списка</p>
+                  </div>
+            }
+          </div>
         </div>
         <NextCategoryBtn
           setCurrentLevel={props.setCurrentLevel}
@@ -66,6 +69,22 @@ const MainContent = (props) => {
           score={props.score}
           attempts={props.attempts}
           setShowMovieInfo={setShowMovieInfo}
+          setGameEnd={setGameEnd}
+          gameEnd={gameEnd}
+        />
+      </main>
+      : <main className='main-content'>
+        <p className='game-end'>Игра закончена. Вы набрали {props.score} баллов из 30 возможных</p>
+        <NextCategoryBtn
+          setCurrentLevel={props.setCurrentLevel}
+          currentLevel={props.currentLevel}
+          checkGuessMovie={checkGuessMovie}
+          setCheckGuessMovie={setCheckGuessMovie}
+          setScore={props.setScore}
+          setAttempts={props.setAttempts}
+          setShowMovieInfo={setShowMovieInfo}
+          setGameEnd={setGameEnd}
+          gameEnd={gameEnd}
         />
       </main>
   );

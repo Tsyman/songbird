@@ -1,3 +1,15 @@
 .movies-list {
   margin-right: 20px;
+  background-color: #5a0000;
+  border-radius: 10px;
+  width: 45%;
+  height: 100%;
 }
+
+.movie {
+  cursor: pointer;
+  border: 2px solid black;
+  font-size: 18px;
+  padding: 10px;
+}
+

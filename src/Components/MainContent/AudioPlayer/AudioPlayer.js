@@ -1,11 +1,12 @@
 import React from 'react';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import winSound from '../../../assets/audio/win.mp3';
 
 const Player = (props) => (
   <AudioPlayer
     autoPlayAfterSrcChange={false}
-    src={props.audio}
+    src={props.checkGuessMovie ? winSound : props.audio}
     volume={0.5}
     showJumpControls={false}
     customControlsSection={[]}
