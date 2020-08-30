@@ -1,3 +1,7 @@
+.movie-description {
+  width: 55%;
+}
+
 .movie-description__inner {
   display: flex;
   margin-bottom: 20px;
@@ -11,6 +15,7 @@
   background-size: cover;
   background-position: center;
   margin-right: 35px;
+  border: 1px solid #444;
 }
 
 .movie-info {
@@ -98,4 +103,83 @@
 
 .focus:focus + .hidden{
   display: block;
+}
+
+
+@media screen and (max-width: 1100px) {
+  .movie-info h3:first-child {
+      font-size: 20px;
+  }
+  .movie-info h3 {
+    font-size: 16px;
+  }
+  .movie-info .rhap_time {
+    font-size: 14px;
+  }
+  .movie-info .rhap_container {
+    padding: 5px 5px;
+  }
+  .movie-info .rhap_play-pause-button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .movie-description__inner {
+    flex-direction: column;
+  }
+  .movie-description-image {
+    align-self: center;
+    margin-right: 0;
+  }
+  .line {
+    margin: 10px 0;
+  }
+  .movie-info .rhap_container {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie-info h3:first-child {
+    font-size: 18px;
+  }
+  .movie-description {
+    width: 100%;
+  }
+  .movie-description__inner {
+    flex-direction: unset;
+  }
+  .movie-description-image {
+    align-self: unset;
+    margin-right: 35px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .movie-description__inner {
+    flex-direction: column;
+  }
+  .movie-description-image {
+    align-self: center;
+    margin-right: 0;
+  }
+  .line {
+    margin: 10px 0;
+  }
+  .movie-info {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .movie-info h3:first-child {
+    font-size: 18px;
+  }
+  .movie-info h3 {
+  font-size: 14px;
+  }
 }

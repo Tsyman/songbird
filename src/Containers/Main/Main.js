@@ -37,7 +37,7 @@ const MainContent = (props) => {
   }, [props.currentLevel]);
 
   return (
-    !gameEnd
+    gameEnd
       ? <main className='main-content'>
         <GuessMovie
           guessMovie={guessMovie.movie}

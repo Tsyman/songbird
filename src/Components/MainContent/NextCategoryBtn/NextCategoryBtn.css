@@ -26,3 +26,14 @@
 .next-button_active:hover {
   background-color: #cf0042;
 }
+
+@media screen and (max-width: 768px) {
+  .next-button {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .next-button_active {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+}  

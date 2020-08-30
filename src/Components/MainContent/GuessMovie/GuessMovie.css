@@ -1,8 +1,8 @@
 .movie__inner {
   display: flex;
   justify-content: space-evenly;
-  margin: 20px 0;
-  width: 90%;
+  margin: 40px 0;
+  width: 100%;
 }
 
 .movie-image {
@@ -12,6 +12,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border: 1px solid #444;
 }
 
 .guess-movie {
@@ -65,6 +66,7 @@
 
 .rhap_progress-indicator {
   background-color: #fff;
+  top: -8px;
 }
 
 .rhap_main-controls-button {
@@ -82,3 +84,60 @@
 .rhap_volume-indicator {
   background-color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .guess-movie .title {
+    font-size: 24px;
+    margin-top: 15px;
+  }
+  .movie__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .guess-movie {
+    margin-left: 0px;
+  }
+  .guess-movie .rhap_play-pause-button {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+  }
+}  
+
+@media screen and (max-width: 500px) {
+  .guess-movie .title {
+    font-size: 22px;
+  }
+  .guess-movie .rhap_time {
+    font-size: 14px;
+  }
+  .guess-info .rhap_container {
+    padding: 5px 5px;
+  }
+  .guess-info .rhap_play-pause-button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+  .guess-movie .rhap_progress-indicator {
+    width: 15px;
+    height: 15px;
+    top: -5px;
+  }
+  .guess-movie .rhap_volume-controls{
+    margin-left: 5px;
+  }
+  .guess-movie .rhap_container {
+    padding: 5px 5px;
+  }
+  .guess-movie .rhap_progress-container {
+    flex: 1 0 auto;
+  }
+} 
+
+@media screen and (max-width: 400px) {
+  .guess-movie .title {
+    font-size: 20px;
+  }
+}
+

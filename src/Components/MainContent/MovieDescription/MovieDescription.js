@@ -8,11 +8,11 @@ const MovieDescription = (props) => (
       <div className="movie-description-image" style={{ backgroundImage: `url(${props.selectedMovieImage})` }}></div>
       <div className='movie-info'>
         <h3>{props.selectedMovie}</h3>
-        <hr></hr>
+        <hr className='line'></hr>
         <h3>Год производства: {props.selectedMovieYear}</h3>
-        <hr></hr>
+        <hr className='line'></hr>
         <h3>{props.selectedMovieRating}</h3>
-        <hr></hr>
+        <hr className='line'></hr>
         <Player audio={props.selectedMovieAudio}/>
       </div>
     </div>
